@@ -6,7 +6,7 @@ class Voiture:
         self.annee = annee
 
     def __str__(self):
-        return "Je suis une voiture de l'année {self.annee}."
+        return f"Je suis une voiture de l'année {self.annee}."
 
 
 class Peugeot(Voiture):
