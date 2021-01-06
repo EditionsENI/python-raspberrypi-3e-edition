@@ -15,8 +15,8 @@ class MaRessource:
         print("Dans __exit__()")
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     res = MaRessource()
-    print("Objet manipulé? " + str(res))
+    print(f"Objet manipulé? {res}")
     with res as r:
         print("Dans with")
