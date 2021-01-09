@@ -17,7 +17,8 @@ if uid != 0:
     sys.exit("Vous devez être administrateur pour lancer ce script!")
 
 
-choix = input("Souhaitez-vous ajouter/supprimer un utilisateur ? [a/s] ").strip()
+choix = input(
+    "Souhaitez-vous ajouter/supprimer un utilisateur ? [a/s] ").strip()
 
 
 if choix not in ('a', 's'):
