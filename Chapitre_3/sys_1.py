@@ -4,7 +4,7 @@ import sys
 
 def main():
     for numero, arg in enumerate(sys.argv):
-        print('Argument#{0}: {1}'.format(numero, arg))
+        print(f"Argument#{numero}: {arg}")
 
 
 if __name__ == "__main__":

@@ -10,8 +10,7 @@ def main():
     try:
         infos = pwd.getpwnam(utilisateur)
     except KeyError:
-        print("L'utilisateur '{0}' n'existe pas sur ce système!".format(
-            utilisateur))
+        print(f"L'utilisateur '{utilisateur}' n'existe pas sur ce système!")
         sys.exit(1)
 
     print("Nom d'utilisateur:", infos.pw_name)

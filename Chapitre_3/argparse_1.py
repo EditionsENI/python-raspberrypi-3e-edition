@@ -26,7 +26,7 @@ def main():
                          default=False,
                          help="verbosité du script",
                          action="store_true")
-    parseur.add_argument(dest="reste",
+    parseur.add_argument(dest="restant",
                          help="arguments restants",
                          nargs="*")
 
@@ -35,7 +35,7 @@ def main():
     print("Nom?       :", args.nom)
     print("Age?       :", args.age)
     print("Verbeux?   :", args.verbeux)
-    print("Reste?     :", args.reste)
+    print("Arguments? :", args.restant)
 
 
 if __name__ == "__main__":
