@@ -109,7 +109,7 @@ class PiDiteur(Frame):
         with open(fichier, "w", encoding="utf-8") as f:
             f.write(texte)
         self.barre_texte.config(text=fichier)
-        self.master.title("%s - %s" % (self.nom_editeur, fichier))
+        self.master.title("{} - {}".format(self.nom_editeur, fichier))
 
     def enregistrer_sous(self):
         fichier = asksaveasfilename()
