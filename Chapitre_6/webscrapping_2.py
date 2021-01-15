@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-from urllib.request import urlopen
 from html.parser import HTMLParser
+import requests
 import re
 
-url = 'https://fr.wikipedia.org/wiki/France'
+url = "https://fr.wikipedia.org/wiki/France"
 
 
 class ParseurWiki(HTMLParser):
@@ -11,18 +11,19 @@ class ParseurWiki(HTMLParser):
         HTMLParser.__init__(self)
 
     def handle_starttag(self, tag, attrs):
-        if tag == 'img':
+        if tag == "img":
             tagattrs = dict((x, y) for x, y in attrs)
-            img = tagattrs['src']
-            if re.search(r'upload', img):
-                print('https:' + img)
+            img = tagattrs["src"]
+            if re.search(r"upload", img):
+                print("https:" + img)
 
 
 def main():
-    reponse = urlopen(url)
-    data = reponse.read().decode('UTF-8')
-    ParseurWiki().feed(data)
+    with requests.Session() as session:
+        reponse = session.get(url)
+        page = reponse.text
+        ParseurWiki().feed(page)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
