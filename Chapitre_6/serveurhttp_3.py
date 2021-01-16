@@ -4,8 +4,8 @@ from http.server import HTTPServer
 import os
 
 
-port = 8080
 ip = "127.0.0.1"
+port = 8080
 
 
 def main():

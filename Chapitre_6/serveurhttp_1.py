@@ -3,8 +3,8 @@ from http.server import BaseHTTPRequestHandler
 from http.server import HTTPServer
 
 
-port = 8080
 ip = "127.0.0.1"
+port = 8080
 
 
 class HTTPi(BaseHTTPRequestHandler):
@@ -28,8 +28,7 @@ class HTTPi(BaseHTTPRequestHandler):
 def main():
     try:
         serveur = HTTPServer((ip, port), HTTPi)
-        print("Démarrage du serveur HTTPi: http://%s:%s" %
-              (ip, port))
+        print(f"Démarrage du serveur HTTPi: http://{ip}:{port}")
         serveur.serve_forever()
     except KeyboardInterrupt:
         serveur.socket.close()
