@@ -7,27 +7,21 @@ import smtplib
 serveursmtp = "smtp.free.fr"
 
 
-From = "Patrice Clement <patrice.clement@posteo.net>"
-To = "Patrice Clement <patrice.clement@posteo.net>"
+From = "Patrice Clement <foo@bar.local>"
+To = "Patrice Clement <foo@bar.local>"
 Subject = "Le sujet de cet email."
 Date = email.utils.formatdate()
+Now = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S.%f"))
 
 
-entetes = ("""From: %s
-To: %s
-Date: %s
-Subject: %s""" % (
-    From,
-    To,
-    Date,
-    Subject
-  )
-)
+entetes = f"""From: {From}
+To: {To}
+Date: {Date}
+Subject: {Subject}"""
 
-
-corps = entetes + """
-Ceci est un test. Date du message: %s
-""" % (datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S.%f"))
+corps = f"""{entetes}
+Ceci est un test. Date du message: {now}
+"""
 
 
 def main():
