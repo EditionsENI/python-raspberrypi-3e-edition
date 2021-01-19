@@ -4,9 +4,9 @@ from klasse import MaClasse
 
 
 def main():
-    chemin = "bdd/pickle.db"
-    print(f"Ecriture dans '{chemin}'...")
-    with open(chemin, "wb") as f:
+    fichier = "bdd/pickle.db"
+    print(f"Ecriture dans '{fichier}'...")
+    with open(fichier, "wb") as f:
         maClasse = MaClasse(150)
         pickle.dump(maClasse, f)
     print("OK!")

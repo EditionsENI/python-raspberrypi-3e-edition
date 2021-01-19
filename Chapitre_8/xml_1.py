@@ -3,8 +3,8 @@ from xml.etree import ElementTree
 
 
 def main():
-    chemin = "bdd/commandes.xml"
-    print("Génération de '{}' ...".format(chemin))
+    fichier = "bdd/commandes.xml"
+    print(f"Génération de '{fichier}' ...")
     xml = ElementTree.XML("""
 <body>
     <commandes>
@@ -21,7 +21,7 @@ def main():
 </body>
 """)
     arbre = ElementTree.ElementTree(xml)
-    arbre.write(chemin, encoding="UTF-8", xml_declaration=True)
+    arbre.write(fichier, encoding="UTF-8", xml_declaration=True)
     print("OK!")
 
 

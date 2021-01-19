@@ -12,9 +12,9 @@ def generer_donnees():
 
 
 def main():
-    chemin = "bdd/fichier.csv"
-    print("Ecriture dans le fichier '{}'...".format(chemin))
-    with open(chemin, 'w') as f:
+    fichier = "bdd/fichier.csv"
+    print(f"Ecriture dans le fichier '{fichier}'...")
+    with open(fichier, 'w') as f:
         writer = csv.writer(f)
         for ligne in generer_donnees():
             writer.writerow(ligne)

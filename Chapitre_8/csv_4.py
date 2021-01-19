@@ -5,9 +5,9 @@ from csv_3 import enregistrer_dialecte
 
 def main():
     enregistrer_dialecte()
-    chemin = "bdd/dialecte.csv"
-    print(f"Lecture de {chemin}...")
-    with open(chemin, "r") as f:
+    fichier = "bdd/dialecte.csv"
+    print(f"Lecture de {fichier}...")
+    with open(fichier, "r") as f:
         reader = csv.reader(f, dialect="pourcent")
         for ligne in reader:
             print(ligne)

@@ -9,9 +9,9 @@ def enregistrer_dialecte():
 
 def main():
     enregistrer_dialecte()
-    chemin = "bdd/dialecte.csv"
-    print(f"Ecriture dans le fichier '{chemin}'...")
-    with open(chemin, "w") as f:
+    fichier = "bdd/dialecte.csv"
+    print(f"Ecriture dans le fichier '{fichier}'...")
+    with open(fichier, "w") as f:
         writer = csv.writer(f, dialect="pourcent")
         for ligne in generer_donnees():
             writer.writerow(ligne)

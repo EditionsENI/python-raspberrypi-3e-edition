@@ -3,12 +3,12 @@ import shelve
 
 
 def main():
-    chemin = "bdd/shelve.db"
-    print("Lecture de '{}'...".format(chemin))
-    bdd = shelve.open(chemin)
+    fichier = "bdd/shelve.db"
+    print(f"Lecture de '{fichier}'...")
+    bdd = shelve.open(fichier)
     print("Objets stockés: Clé => Valeur")
     for cle, valeur in bdd.items():
-        print("{} => {}".format(cle, valeur))
+        print(f"[{cle}] => [{valeur}]")
     print(bdd["str"])
     bdd.close()
 

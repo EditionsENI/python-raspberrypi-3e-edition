@@ -4,9 +4,9 @@ from klasse import MaClasse
 
 
 def main():
-    chemin = "bdd/shelve.db"
-    print("Ecriture dans '{}'...".format(chemin))
-    bdd = shelve.open(chemin, "n")
+    fichier = "bdd/shelve.db"
+    print(f"Ecriture dans '{fichier}'...")
+    bdd = shelve.open(fichier, "n")
     for i in (90, 150, 300):
         bdd[str(i)] = MaClasse(i)
     bdd["dict"] = {
