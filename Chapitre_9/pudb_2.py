@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import pdb
+import pudb
 
 
 def explosion(arg="kaboom!", elem=1):
@@ -10,7 +10,7 @@ def explosion(arg="kaboom!", elem=1):
 def main():
     for i in range(5):
         if i == 3:
-            pdb.set_trace()
+            pudb.set_trace()
             explosion(elem=i)
 
 
