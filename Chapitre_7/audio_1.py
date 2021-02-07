@@ -5,7 +5,8 @@ import wave
 
 def main():
     carte = "sysdefault:CARD=U0x46d0x825"
-    entree = alsaaudio.PCM(alsaaudio.PCM_CAPTURE, alsaaudio.PCM_NONBLOCK, carte)
+    entree = alsaaudio.PCM(alsaaudio.PCM_CAPTURE,
+                           alsaaudio.PCM_NONBLOCK, carte)
     entree.setchannels(1)
     entree.setrate(44100)
     entree.setformat(alsaaudio.PCM_FORMAT_S16_LE)

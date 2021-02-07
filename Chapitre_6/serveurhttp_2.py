@@ -16,7 +16,8 @@ class HTTPi(BaseHTTPRequestHandler):
             with open("index.html", "r", encoding="UTF-8") as index:
                 body = "".join(index.readlines()).encode("UTF-8")
         except FileNotFoundError:
-            body = "<h1>Le fichier index.html n'existe pas!<h1>".encode("UTF-8")
+            body = "<h1>Le fichier index.html n'existe pas!<h1>".encode(
+                "UTF-8")
         self.wfile.write(body)
 
 

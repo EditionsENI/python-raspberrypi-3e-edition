@@ -53,15 +53,19 @@ class PiDiteur(Frame):
     def menu_fichier(self):
         menu = Menu(self.barre_menu, tearoff=False)
         menu.add_command(label="Ouvrir (Ctrl+o)", command=self.ouvrir)
-        menu.add_command(label="Nouveau (Ctrl+n)", command=self.afficher_fichier)
-        menu.add_command(label="Enregistrer (Ctrl+s)", command=self.enregistrer)
-        menu.add_command(label="Enregistrer sous", command=self.enregistrer_sous)
+        menu.add_command(label="Nouveau (Ctrl+n)",
+                         command=self.afficher_fichier)
+        menu.add_command(label="Enregistrer (Ctrl+s)",
+                         command=self.enregistrer)
+        menu.add_command(label="Enregistrer sous",
+                         command=self.enregistrer_sous)
         menu.add_command(label="Fermer (Alt+F4)", command=self.quitter)
         self.barre_menu.add_cascade(label="Fichier", menu=menu)
 
     def menu_editer(self):
         menu = Menu(self.barre_menu, tearoff=False)
-        menu.add_command(label="Couper (Ctrl+x)", command=lambda: self.copier(True))
+        menu.add_command(label="Couper (Ctrl+x)",
+                         command=lambda: self.copier(True))
         menu.add_command(label="Copier (Ctrl+c)", command=self.copier)
         menu.add_command(label="Coller (Ctrl+v)", command=self.coller)
         menu.add_command(label="Chercher (Ctrl+f)", command=self.chercher)
@@ -136,7 +140,8 @@ class PiDiteur(Frame):
             pass
 
     def chercher(self):
-        caractere = askstring("Recherche", "Tapez votre chaîne de caractères :")
+        caractere = askstring(
+            "Recherche", "Tapez votre chaîne de caractères :")
         if caractere:
             trouve = self.zone_texte.search(caractere, INSERT, END)
             if trouve:

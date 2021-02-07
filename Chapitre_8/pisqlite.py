@@ -12,7 +12,8 @@ class PiSQLite(cmd.Cmd):
         self.conn = None
 
     def connection(self):
-        if self.conn == None: self.conn = sqlite3.connect(self.base)
+        if self.conn == None:
+            self.conn = sqlite3.connect(self.base)
         return self.conn
 
     def curseur(self):
@@ -21,7 +22,8 @@ class PiSQLite(cmd.Cmd):
     def do_creer(self, valeurs):
         """Crée la table 'produits'."""
         try:
-            self.curseur().execute("create table produits (code char primary key, nom char, quantite int)")
+            self.curseur().execute(
+                "create table produits (code char primary key, nom char, quantite int)")
         except sqlite3.OperationalError:
             print("La table 'produits' existe déjà!")
 

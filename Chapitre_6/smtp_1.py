@@ -11,13 +11,14 @@ From = "Patrice Clement <foo@bar.local>"
 To = "Patrice Clement <foo@bar.local>"
 Subject = "Le sujet de cet email."
 Date = email.utils.formatdate()
-Now = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S.%f"))
+now = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S.%f"))
 
 
 entetes = f"""From: {From}
 To: {To}
 Date: {Date}
 Subject: {Subject}"""
+
 
 corps = f"""{entetes}
 Ceci est un test. Date du message: {now}

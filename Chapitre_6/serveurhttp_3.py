@@ -15,7 +15,8 @@ def main():
         print(f"Démarrage du serveur HTTP: http://{ip}:{port}")
         serveur.serve_forever()
     except FileNotFoundError as e:
-        sys.stderr.write(f"ERREUR! Le répertoire \"{repertoire}\" n'existe pas!\n")
+        sys.stderr.write(
+            f"ERREUR! Le répertoire \"{repertoire}\" n'existe pas!\n")
         raise e
     except KeyboardInterrupt:
         serveur.socket.close()

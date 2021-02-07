@@ -32,9 +32,11 @@ class LCDiteur(Frame):
         self.zone_texte.pack(side=LEFT, fill=BOTH, expand=YES)
         self.bouton_frame = Frame(self, padx=25, pady=25)
         self.bouton_frame.pack(side=RIGHT, fill=BOTH)
-        self.bouton_envoyer = Button(self.bouton_frame, command=lambda: self.envoyer_message(), text="Envoyer le message")
+        self.bouton_envoyer = Button(
+            self.bouton_frame, command=lambda: self.envoyer_message(), text="Envoyer le message")
         self.bouton_envoyer.pack(fill=BOTH)
-        self.bouton_effacer = Button(self.bouton_frame, command=lambda: self.effacer(), text="Effacer")
+        self.bouton_effacer = Button(
+            self.bouton_frame, command=lambda: self.effacer(), text="Effacer")
         self.bouton_effacer.pack(fill=BOTH)
         self.zone_texte.focus()
         self.master.title("%s" % (self.nom_editeur))
@@ -69,8 +71,9 @@ class LCDiteur(Frame):
     def quitter(self):
         if askyesno("Confirmation",
                     f"Voulez-vous vraiment fermer {self.nom_editeur} ?")
-            self.lcd.nettoyer()
-            Frame.quit(self)
+        self.lcd.nettoyer()
+        Frame.quit(self)
+
 
 if __name__ == "__main__":
     LCDiteur().mainloop()

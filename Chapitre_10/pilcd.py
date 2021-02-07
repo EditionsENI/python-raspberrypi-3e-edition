@@ -27,10 +27,10 @@ class PiLCD:
 
 if __name__ == "__main__":
     PiLCD([
-    ( "Le Raspberry Pi",
-      "C'est bien ...",
-      3 ),
-    ( "Avec un LCD",
-      "C'est mieux !",
-      5 )
+        ("Le Raspberry Pi",
+         "C'est bien ...",
+         3),
+        ("Avec un LCD",
+         "C'est mieux !",
+         5)
     ])

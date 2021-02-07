@@ -16,7 +16,8 @@ def main():
         while True:
             try:
                 data = w.readframes(1024)
-                if not data: break
+                if not data:
+                    break
                 sortie.write(data)
             except KeyboardInterrupt:
                 break
