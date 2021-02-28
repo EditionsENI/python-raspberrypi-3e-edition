@@ -6,4 +6,4 @@ for element in liste:
         continue
     if element == 4:
         break
-    print("element = " + str(element))
+    print(f"element = {element}")

@@ -9,7 +9,7 @@ while temperature < 15:
         continue
     if temperature == 14:
         break
-    print("L'eau est désormais à " + str(temperature) + " degrés")
+    print(f"L'eau est désormais à {temperature} degrés")
     print("L'eau n'est pas assez chaude")
     print("J'augmente la température d'un degré ...")
     sleep(1)
