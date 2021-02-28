@@ -3,6 +3,7 @@ import pudb
 
 
 def explosion(arg="kaboom!", elem=1):
+    pudb.set_trace()
     elem = elem + 1
     return elem / 0
 
@@ -10,7 +11,6 @@ def explosion(arg="kaboom!", elem=1):
 def main():
     for i in range(5):
         if i == 3:
-            pudb.set_trace()
             explosion(elem=i)
 
 
