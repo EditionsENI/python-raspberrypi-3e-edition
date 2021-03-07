@@ -3,7 +3,7 @@ from tkinter.messagebox import askyesno
 from lcd16x2 import LCD16x2
 from tkinter import Button, Frame, Text
 from tkinter import SUNKEN, LEFT, RIGHT
-from tkinter import BOTH, WORD, YES
+from tkinter import BOTH, WORD, YES, END
 
 
 class LCDiteur(Frame):
@@ -70,8 +70,8 @@ class LCDiteur(Frame):
 
     def quitter(self):
         if askyesno("Confirmation",
-                    f"Voulez-vous vraiment fermer {self.nom_editeur} ?")
-        self.lcd.nettoyer()
+                   f"Voulez-vous vraiment fermer {self.nom_editeur} ?"):
+            self.lcd.nettoyer()
         Frame.quit(self)
 
 
