@@ -3,12 +3,15 @@ from tkinter.filedialog import asksaveasfilename
 from tkinter.filedialog import askopenfilename
 from tkinter import Button
 from tkinter import Frame
+from tkinter import PhotoImage
+from tkinter import Tk
 import alsaaudio
-import wave
 import threading
+import tkinter
+import wave
 
 
-class PiAudio(Tk):
+class PiAudio(tkinter.Tk):
     def __init__(self):
         Tk.__init__(self)
         self.nom_carte = "sysdefault:CARD=U0x46d0x825"

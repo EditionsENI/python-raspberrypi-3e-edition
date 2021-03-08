@@ -11,7 +11,7 @@ def main():
     texte = "Hello world avec Pillow"
     tailleimage = (600, 300)
     font = ImageFont.truetype(
-        filename="/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf", size=20)
+        font="/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf", size=20)
     img = Image.new(mode="RGB", color=(0, 110, 145), size=tailleimage)
     drawer = ImageDraw.Draw(img)
     tailletexte = drawer.textsize(texte, font)
