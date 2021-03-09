@@ -17,3 +17,4 @@ html = f"""
   <p>Temp&eacute;rature actuelle du processeur du Raspberry Pi: {temperature} C</p>
 </body>
 </html>"""
+print(html)

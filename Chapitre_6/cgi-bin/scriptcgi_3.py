@@ -5,7 +5,7 @@ import cgi
 formulaire = cgi.FieldStorage()
 personne = ""
 if "nom" in formulaire:
-    personne = "Bonjour {} !".format(formulaire["nom"].value))
+    personne = "Bonjour {} !".format(formulaire["nom"].value)
 else:
     personne = "Mais qui &ecirc;tes-vous !?"
 
