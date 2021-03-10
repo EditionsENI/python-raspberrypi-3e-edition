@@ -4,7 +4,7 @@ import sys
 
 
 def format_commande(utilisateur, choix):
-    commande
+    commande = ""
     if choix == "a":
         commande = f"/usr/sbin/useradd -m {utilisateur}"
     elif choix == "s":

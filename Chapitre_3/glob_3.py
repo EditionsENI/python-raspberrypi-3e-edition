@@ -3,7 +3,7 @@ import glob
 
 
 def main():
-    iter_fichiers = glob.iglob("/etc/m*.conf")
+    iter_fichiers = glob.iglob("/etc/*.conf")
     print(type(iter_fichiers))
     print(next(iter_fichiers))
 

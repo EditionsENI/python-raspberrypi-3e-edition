@@ -3,7 +3,7 @@ import glob
 
 
 def main():
-    fichier_conf_m = glob.glob("/etc/m*.conf")
+    fichier_conf_m = glob.glob("/etc/*.conf")
     for fichier in fichier_conf_m:
         print(fichier)
 
