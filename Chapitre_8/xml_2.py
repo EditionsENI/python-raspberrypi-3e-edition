@@ -7,16 +7,16 @@ def main():
         xml = ElementTree.parse(f)
         racine = xml.getroot()
     commandes = racine.find("commandes")
-    print("Nombre de noeuds dans le noeud 'commandes': {}".format(len(commandes))
+    print("Nombre de noeuds dans le noeud 'commandes': {}".format(len(commandes)))
     for commande in commandes:
-        print("""  Nom: {}
-  Code: {}
-  Quantite: {}""".format(
-      commande.text.strip(),
-      commande.attrib["code"],
-      commande.attrib["quantite"]
+        print("""Nom: {}
+Code: {}
+Quantite: {}""".format(
+        commande.text.strip(),
+        commande.attrib["code"],
+        commande.attrib["quantite"]
+      )
     )
-)
 
 
 if __name__ == "__main__":
