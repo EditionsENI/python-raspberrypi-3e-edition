@@ -6,7 +6,7 @@ from tkinter import Label
 def main():
     fenetre = tkinter.Tk()
     fenetre.geometry("300x150")
-    label = Label(fenetre, text="Hello world avec tkinter!")
+    label = Label(fenetre, text="Hello world avec tkinter !")
     label.place(x=100, y=70)
     fenetre.mainloop()
 

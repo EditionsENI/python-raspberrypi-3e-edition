@@ -16,7 +16,7 @@ class HelloWorldTkinter(tk.Frame):
         self.label_un = tk.Label(self, text="Hello world", fg="red", bg="blue")
         self.label_un.pack(fill=BOTH)
         self.label_deux = tk.Label(
-            self, text="avec tkinter!", fg="blue", bg="red")
+            self, text="avec tkinter !", fg="blue", bg="red")
         self.label_deux.pack(fill=BOTH)
 
     def creer_bouton_fermer(self):
@@ -27,5 +27,5 @@ class HelloWorldTkinter(tk.Frame):
 if __name__ == "__main__":
     hello = HelloWorldTkinter()
     hello.master.geometry("300x150")
-    hello.master.title("Titre fenetre: Hello!")
+    hello.master.title("Titre fenetre: Hello !")
     hello.mainloop()

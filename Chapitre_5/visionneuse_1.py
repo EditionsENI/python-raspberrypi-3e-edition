@@ -77,7 +77,7 @@ class PiVision(Tk):
                               pady=25, padx=25, aspect=800)
         self.erreur.config(font=("courier", 14, "bold"))
         self.erreur.pack(expand=YES, fill=BOTH)
-        self.title("Erreur!")
+        self.title("Erreur !")
         self.update()
 
 

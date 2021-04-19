@@ -10,7 +10,7 @@ from tkinter import BOTTOM
 def main():
     fenetre = tkinter.Tk()
     fenetre.geometry("300x150")
-    label = Label(fenetre, text="Hello world avec tkinter!",
+    label = Label(fenetre, text="Hello world avec tkinter !",
                   fg="red", bg="blue")
     label.pack(expand=YES, fill=BOTH)
     bouton = Button(fenetre, text="Fermer", command=fenetre.quit)
