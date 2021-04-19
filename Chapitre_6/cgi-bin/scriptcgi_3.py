@@ -14,7 +14,7 @@ print("Content-Type: text-html; charset=utf-8\r\n\r\n")
 html = f"""
 <html>
 <head>
-<title>Exemple #3: Soumettre des formulaires avec la methode POST</title>
+<title>Exemple #3 : Soumettre des formulaires avec la methode POST</title>
 </head>
 <body>
   <h1>Deuxieme &eacute;tape</h1>

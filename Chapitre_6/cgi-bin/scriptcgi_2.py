@@ -10,7 +10,7 @@ print("Content-Type: text-html; charset=utf-8\r\n\r\n")
 html = f"""
 <html>
 <head>
-<title>Exemple #2: Formatter du code HTML directement en Python</title>
+<title>Exemple #2 : Formater du code HTML directement en Python</title>
 </head>
 <body>
   <h1>Obtenir des informations en temps r&eacute;el</h1>

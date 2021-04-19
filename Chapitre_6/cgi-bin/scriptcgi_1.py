@@ -5,12 +5,12 @@ date = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S.%f")
 html = f"""
 <html>
 <head>
-<title>Exemple #1: Simple programme "Hello world" en CGI</title>
+<title>Exemple #1 : Simple programme "Hello world" en CGI</title>
 </head>
 <body>
   <h1>Hello Pi CGI !</h1>
   <p>Cette page est g&eacute;n&eacute;r&eacute;e &agrave; l'aide d'un script CGI &eacute;crit en Python.<p>
-  <p>Requ&ecirc;te &eacute;ffectu&eacute;e &agrave;: {date} </p>
+  <p>Requ&ecirc;te &eacute;ffectu&eacute;e &agrave; : {date} </p>
 </body>
 </html>"""
 print(html)
