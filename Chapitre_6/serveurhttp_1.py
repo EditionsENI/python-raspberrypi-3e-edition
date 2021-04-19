@@ -15,10 +15,10 @@ class HTTPi(BaseHTTPRequestHandler):
         content = """
 <html>
 <head>
-<title>Hello Pi!</title>
+<title>Hello Pi !</title>
 </head>
 <body>
-  <h1>Hello Pi!</h1>
+  <h1>Hello Pi !</h1>
 </body>
 </html>"""
         body = content.encode("UTF-8")
