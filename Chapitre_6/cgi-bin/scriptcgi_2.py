@@ -14,7 +14,7 @@ html = f"""
 </head>
 <body>
   <h1>Obtenir des informations en temps r&eacute;el</h1>
-  <p>Temp&eacute;rature actuelle du processeur du Raspberry Pi: {temperature} C</p>
+  <p>Temp&eacute;rature actuelle du processeur du Raspberry Pi : {temperature} C</p>
 </body>
 </html>"""
 print(html)
